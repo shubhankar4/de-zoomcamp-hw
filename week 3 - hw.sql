@@ -1,14 +1,17 @@
--- Q1
+-- Creating fhv_external_table
 CREATE OR REPLACE EXTERNAL TABLE `taxi-rides-ny.fhv.external_fhv_tripdata`
     OPTIONS (
       format = 'CSV',
       uris = ['gs://dtc_data_lake_taxi-rides-ny/fhv/fhv_tripdata_2019-*.csv.gz']
 );
 
--- Q2 External Table
+-- Q1
 SELECT COUNT(*) FROM taxi-rides-ny.fhv.external_fhv_tripdata;
 
--- Q2 Table
+-- Q2
+SELECT COUNT(*) FROM taxi-rides-ny.fhv.external_fhv_tripdata;
+
+
 CREATE OR REPLACE TABLE taxi-rides-ny.fhv.fhv_tripdata AS
 SELECT * FROM taxi-rides-ny.fhv.external_fhv_tripdata;
 
