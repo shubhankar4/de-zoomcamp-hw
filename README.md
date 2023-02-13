@@ -1,1 +1,1 @@
-# Homeworks for [https://github.com/DataTalksClub/data-engineering-zoomcamp] (Data Engineering Zoomcamp)
+# Homeworks for [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
