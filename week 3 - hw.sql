@@ -9,12 +9,14 @@ CREATE OR REPLACE EXTERNAL TABLE `taxi-rides-ny.fhv.external_fhv_tripdata`
 SELECT COUNT(*) FROM taxi-rides-ny.fhv.external_fhv_tripdata;
 
 -- Q2
+-- Query on External Table
 SELECT COUNT(*) FROM taxi-rides-ny.fhv.external_fhv_tripdata;
 
 
 CREATE OR REPLACE TABLE taxi-rides-ny.fhv.fhv_tripdata AS
 SELECT * FROM taxi-rides-ny.fhv.external_fhv_tripdata;
 
+-- Query on Materialized Table
 SELECT COUNT(*) FROM taxi-rides-ny.fhv.fhv_tripdata;
 
 -- Q3
